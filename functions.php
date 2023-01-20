@@ -9,4 +9,9 @@ function fiction_theme_files()
     wp_enqueue_style('fiction_theme_extra_styles', get_theme_file_uri('/build/index.css'));
 }
 
+function fiction_theme_features()
+{
+    add_theme_support('title-tag');
+}
 add_action('wp_enqueue_scripts', 'fiction_theme_files');
+add_action('after_setup_theme', 'fiction_theme_features');
