@@ -11,6 +11,9 @@ function fiction_theme_files()
 
 function fiction_theme_features()
 {
+    register_nav_menu("headerManuLocation", "Header manu location");
+    register_nav_menu("footerManuLocationOne", "Footer manu location One");
+    register_nav_menu("footerManuLocationTwo", "Footer manu location Two");
     add_theme_support('title-tag');
 }
 add_action('wp_enqueue_scripts', 'fiction_theme_files');
